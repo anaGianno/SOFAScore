@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>SOFAScore</title>
-        <link rel="stylesheet" href = "style.css">
+        <link rel="stylesheet" href = "../style/style.css">
     </head>
     <body>
         <!-- header -->
@@ -17,8 +17,13 @@
             setcookie("patient-nhi",$nhi);
             setcookie("patient-surname",$sname);
             setcookie("patient-firstname",$fname);
-            header("Location: index.php");
-            exit();
+
+            echo "your firstname is: " . $fname . "<br>";
+            echo "your surname is: " . $sname . "<br>";
+            echo "your nhi is: " . $nhi . "<br>";
+
+            // header("Location: index.php");
+            // exit();
         ?>
     </body>
 </html>

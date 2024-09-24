@@ -1,9 +1,0 @@
-/* style the header at the top of the page */
-.header{
-    background-color:rgb(1,4,9);
-    border-bottom: 1px solid rgb(48,54,61);
-    height:2.5rem;
-    width:100vw;
-    text-align:center;
-    padding-top:0.5rem;
-  }
