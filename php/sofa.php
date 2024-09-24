@@ -27,11 +27,16 @@
         ?>
 
         <form method="POST" name="form1"  action="result.php">
-            <div class="centralNervousSystem">
+                <label for="centralNervousSystem">Central nervous system</label>
+                <label for="centralNervousSystem">Glasgow coma scale</label>
                 <div class="slidecontainer">
-                    <input type="range" min="0" max="15" value="0" class="slider" id="glasgowcomascale">
+                    <div class ="slidenumbercontainer">
+                      <p style = "display:inline">Age: </p>
+                      <p id ="agenumber"></p><br><br>
+                    </div>
+
+                    <input type="range" min="0" max="15" value="0" class="slider" name="centralNervousSystem" id="centralNervousSystem">
                 </div>
-            </div>
 
                 <!-- total cholesterol input -->
                 <div class = "select-container">
@@ -94,6 +99,10 @@
                         <option value="4">> 5.0 (or < 200 ml/day) </option>
                     </select>
                 </div>
+
+                <input type='submit' value='submit form'> 
         </form>
+
+        <script src = "../script/script.js"></script>
     </body>
 </html>
