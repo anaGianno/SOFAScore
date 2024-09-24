@@ -4,7 +4,7 @@ var nhianswer = document.getElementById("nhianswer");
 // var sname = document.getElementById("sname");
 
 function checknhi(){
-    let nhipattern = /[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]/;
+    let nhipattern = /^[A-Z]{3}\d{4}$/;
     if(nhipattern.test(nhi.value)){
         nhianswer.innerHTML = "good nhi pattern"
         return true;
