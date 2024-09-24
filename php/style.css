@@ -7,3 +7,8 @@
     text-align:center;
     padding-top:0.5rem;
   }
+
+.regex{
+  color: rgb(255,0,0);
+  font-size:50px;
+}
