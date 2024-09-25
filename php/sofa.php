@@ -31,7 +31,7 @@
                 <label for="centralNervousSystem">Glasgow coma scale</label>
                 <div class="slidecontainer">
                     <div class ="slidenumbercontainer">
-                      <p style = "display:inline">Age: </p>
+                      <p style = "display:inline">scale: </p>
                       <p id ="agenumber"></p><br><br>
                     </div>
 
@@ -39,17 +39,51 @@
                 </div>
 
                 <!-- total cholesterol input -->
+                <div class = "cardiovascular-container">
+
                 <div class = "select-container">
                   <label for="cardiovascularSystem">Cardiovascular system</label>
                   <label for="cardiovascularSystem">Mean arterial pressure OR administration of vasopressors required</label>
-                  <select name="cardiovascularSystem" id="cardiovascularSystem">
+                  <label for="cardiovascularSystem">Please enter an input for atleast one option:</label>
+                  <!-- <select name="cardiovascularSystem" id="cardiovascularSystem">
                     <option value="0">MAP ≥ 70 mmHg</option>
                     <option value="1">MAP < 70 mmHg</option>
-                    <option value="2"> 	dopamine ≤ 5 μg/kg/min or dobutamine (any dose)</option>
+                    <option value="2">dopamine ≤ 5 μg/kg/min or dobutamine (any dose)</option>
                     <option value="3">dopamine > 5 μg/kg/min OR epinephrine ≤ 0.1 μg/kg/min OR norepinephrine ≤ 0.1 μg/kg/min</option>
                     <option value="4">dopamine > 15 μg/kg/min OR epinephrine > 0.1 μg/kg/min OR norepinephrine > 0.1 μg/kg/min</option>
+                  </select> -->
+
+                  <label for='map'>map:</label>
+                  <select name="map" id="map">
+                    <option value="0">MAP ≥ 70 mmHg</option>
+                    <option value="1">MAP < 70 mmHg</option>
+                  </select>
+
+                  <label for='dopamine'>dopamine:</label>
+                  <select name="dopamine" id="dopamine">
+                    <option value="2">dopamine ≤ 5 μg/kg/min</option>
+                    <option value="3">dopamine > 5 μg/kg/min</option>
+                    <option value="4">dopamine > 15 μg/kg/min</option>
+                  </select>
+
+                  <label for='dobutamine'>dobutamine:</label>
+                  <input type='text' id='dobutamine' name='dobutamine'><br><br>
+
+                  <label for='epinephrine'>epinephrine:</label>
+                  <select name="epinephrine" id="epinephrine">
+                    <option value="3">epinephrine ≤ 0.1 μg/kg/min</option>
+                    <option value="4">epinephrine > 0.1 μg/kg/min</option>
+                  </select>
+
+                  <label for='norepinephrine'>norepinephrine:</label>
+                  <select name="norepinephrine" id="norepinephrine">
+                    <option value="3">norepinephrine ≤ 0.1 μg/kg/min</option>
+                    <option value="4">norepinephrine > 0.1 μg/kg/min</option>
                   </select>
                 </div>
+
+                </div>
+
 
                 <!-- total cholesterol input -->
                 <div class = "select-container">
@@ -63,6 +97,17 @@
                     <option value="4">< 100 (13.3) and mechanically ventilated including CPAP</option>
                   </select>
                 </div>
+
+                <p>Mechanically ventilated including CPAP: </p>
+                <label class="rb-container">Yes
+                  <input type = "radio" id ="cpapTrue" value="true" name = "cpapTrue">
+                  <span class="checkmark"></span>
+                </label>                
+
+                <label class="rb-container">No
+                  <input type = "radio" id ="cpapFalse" value="false" name = "cpapFalse">
+                  <span class="checkmark"></span>
+                </label>        
 
                 <div class = "select-container">
                     <label for="coagulation">coagulation</label>

@@ -11,8 +11,15 @@
 
         <?php
             $centralNervousSystem = $_POST["centralNervousSystem"];
-            $cardiovascularSystem = $_POST["cardiovascularSystem"];
+            // $cardiovascularSystem = $_POST["cardiovascularSystem"];
+            $map = $_POST["map"];
+            $dopamine = $_POST["dopamine"];
+            $dobutamine = $_POST["dobutamine"];
+            $epinephrine = $_POST["epinephrine"];
+            $norepinephrine= $_POST["norepinephrine"];
             $respiratorySystem = $_POST["respiratorySystem"];
+            $cpapTrue = $_POST["cpapTrue"];
+            $cpapFalse = $_POST["cpapFalse"];
             $coagulation = $_POST["coagulation"];
             $liver = $_POST["liver"];
             $renalFunction = $_POST["renalFunction"];
@@ -29,7 +36,17 @@
             echo "your nhi is: " . $nhi . "<br>";
 
             echo "centralNervousSystem: " . $centralNervousSystem . "<br>";
-            echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
+
+
+
+            // echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
+
+            echo "cpapTrue: " . $cpapTrue. "<br>";
+            echo "cpapFalse: " . $cpapFalse . "<br>";
+            if($respiratorySystem > 2 and $cpapFalse == "false"){
+                $respiratorySystem = 2;
+            }
+
             echo "respiratorySystem: " . $respiratorySystem . "<br>";
             echo "coagulation: " . $coagulation . "<br>";
             echo "liver: " . $liver . "<br>";

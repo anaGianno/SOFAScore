@@ -25,3 +25,8 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+
+//inputs: textboxes are okay
+//input measurements: its nice to add
+//dobutamine: textbox
+//renal function urine output:add that
