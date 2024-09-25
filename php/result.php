@@ -18,8 +18,9 @@
             $epinephrine = $_POST["epinephrine"];
             $norepinephrine= $_POST["norepinephrine"];
             $respiratorySystem = $_POST["respiratorySystem"];
-            $cpapTrue = $_POST["cpapTrue"];
-            $cpapFalse = $_POST["cpapFalse"];
+            // $cpapTrue = $_POST["cpapTrue"];
+            // $cpapFalse = $_POST["cpapFalse"];
+            $cpap = $_POST["cpap"];
             $coagulation = $_POST["coagulation"];
             $liver = $_POST["liver"];
             $renalFunction = $_POST["renalFunction"];
@@ -41,9 +42,10 @@
 
             // echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
 
-            echo "cpapTrue: " . $cpapTrue. "<br>";
-            echo "cpapFalse: " . $cpapFalse . "<br>";
-            if($respiratorySystem > 2 and $cpapFalse == "false"){
+            // echo "cpapTrue: " . $cpapTrue. "<br>";
+            // echo "cpapFalse: " . $cpapFalse . "<br>";
+            echo "cpap: " . $cpap. "<br>";
+            if($respiratorySystem > 2 and $cpap == "false"){
                 $respiratorySystem = 2;
             }
 
