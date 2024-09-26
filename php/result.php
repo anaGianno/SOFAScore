@@ -38,9 +38,14 @@
 
             echo "centralNervousSystem: " . $centralNervousSystem . "<br>";
 
+            $cardiovascularArray = array($map,$dopamine,$dobutamine,$epinephrine,$norepinephrine,$respiratorySystem);
+            for($i=0;$i<sizeof($cardiovascularArray);$i++){
+                if($cardiovascularArray[$i] != null){
+                    $cardiovascularSystem = $cardiovascularArray[$i];
+                }
+            }
 
-
-            // echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
+            echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
 
             // echo "cpapTrue: " . $cpapTrue. "<br>";
             // echo "cpapFalse: " . $cpapFalse . "<br>";

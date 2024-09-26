@@ -50,23 +50,33 @@ function checkCardiovascular(){
   var epinephrineContainer = document.getElementById("epinephrine-container");
   var norepinephrineContainer = document.getElementById("norepinephrine-container");
 
+  var map = document.getElementByName("map");
+  var dopamine = document.getElementByName("dopamine");
+  var dobutamine = document.getElementByName("dobutamine");
+  var epinephrine = document.getElementByName("epinephrine");
+  var norepinephrine = document.getElementByName("norepinephrine");
+
   // put them all in an array for indexing using pagenumber variable
-  let cardiovascularArray = [mapContainer,dopamineContainer,dobutamineContainer,epinephrineContainer,norepinephrineContainer];
+  let cardiovascularContainerArray = [mapContainer,dopamineContainer,dobutamineContainer,epinephrineContainer,norepinephrineContainer];
+  // use cardiovascularValue on this to return the name of the dropdown required
+  let cardiovascularArray = [map,dopamine,dobutamine,epinephrine,norepinephrine];
   let cardiovascularValue;
   var cardiovascular = document.getElementsByName("cardiovascularRadio");
+  let cardiovascularID;
   for(var i = 0; i < cardiovascular.length; i++){
       if(cardiovascular[i].checked){
-           cardiovascularValue = cardiovascular[i].value;
+        cardiovascularValue = cardiovascular[i].value;
+        cardiovascularID = cardiovascular[i].na
       }
   }
 
   // hide/display pages based on pagenumber index
-  for(let i = 0; i<cardiovascularArray.length;i++){
+  for(let i = 0; i<cardiovascularContainerArray.length;i++){
     if(i==cardiovascularValue){
-        cardiovascularArray[i].style.display = "block";
+        cardiovascularContainerArray[i].style.display = "block";
     }
     else{
-        cardiovascularArray[i].style.display = "none";
+        cardiovascularContainerArray[i].style.display = "none";
     }
   }
 }
