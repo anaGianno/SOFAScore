@@ -50,11 +50,11 @@ function checkCardiovascular(){
   var epinephrineContainer = document.getElementById("epinephrine-container");
   var norepinephrineContainer = document.getElementById("norepinephrine-container");
 
-  var map = document.getElementByName("map");
-  var dopamine = document.getElementByName("dopamine");
-  var dobutamine = document.getElementByName("dobutamine");
-  var epinephrine = document.getElementByName("epinephrine");
-  var norepinephrine = document.getElementByName("norepinephrine");
+  var map = document.getElementById("map");
+  var dopamine = document.getElementById("dopamine");
+  var dobutamine = document.getElementById("dobutamine");
+  var epinephrine = document.getElementById("epinephrine");
+  var norepinephrine = document.getElementById("norepinephrine");
 
   // put them all in an array for indexing using pagenumber variable
   let cardiovascularContainerArray = [mapContainer,dopamineContainer,dobutamineContainer,epinephrineContainer,norepinephrineContainer];
@@ -62,11 +62,11 @@ function checkCardiovascular(){
   let cardiovascularArray = [map,dopamine,dobutamine,epinephrine,norepinephrine];
   let cardiovascularValue;
   var cardiovascular = document.getElementsByName("cardiovascularRadio");
-  let cardiovascularID;
+  //let cardiovascularID;
   for(var i = 0; i < cardiovascular.length; i++){
       if(cardiovascular[i].checked){
         cardiovascularValue = cardiovascular[i].value;
-        cardiovascularID = cardiovascular[i].na
+        // cardiovascularID = cardiovascular[i].na
       }
   }
 
@@ -79,6 +79,53 @@ function checkCardiovascular(){
         cardiovascularContainerArray[i].style.display = "none";
     }
   }
+  //xampp or moodle or email. might need to show value and score in result.php
 }
 
+let prevName= "prevName";
+let cardiovascularExist;
+function getCardiovascular(){
+  var map = document.getElementById("map");
+  var dopamine = document.getElementById("dopamine");
+  var dobutamine = document.getElementById("dobutamine");
+  var epinephrine = document.getElementById("epinephrine");
+  var norepinephrine = document.getElementById("norepinephrine");
 
+  // use cardiovascularValue on this to return the name of the dropdown required
+  let cardiovascularArray = [map,dopamine,dobutamine,epinephrine,norepinephrine];
+  let cardiovascularNamesArray = ["map","dopamine","dobutamine","epinephrine","norepinephrine"];
+  let cardiovascularValue;
+  var cardiovascular = document.getElementsByName("cardiovascularRadio");
+  let cardiovascularID;
+
+  for(var i = 0; i < cardiovascular.length; i++){
+    if(cardiovascular[i].checked){
+      cardiovascularValue = cardiovascular[i].value;
+      // cardiovascularID = cardiovascular[i].na
+    }
+  }
+
+  alert("teeeeest");
+  alert("cardio value" + cardiovascularValue);
+  // hide/display pages based on pagenumber index
+  for(var i = 0; i<cardiovascularArray.length;i++){
+    name1 = cardiovascularArray[i].getAttribute("name");
+    alert("test1" + cardiovascularArray[i].getAttribute("name"));
+
+    if(i==cardiovascularValue){
+        alert("beforeMain" + cardiovascularArray[i].getAttribute("name"));
+        cardiovascularArray[i].setAttribute("name","cardiovascularSystem");
+        alert("afterMain" + cardiovascularArray[i].getAttribute("name"));
+        prevName = name1;
+        cardiovascularExist = true;
+    }
+    else{
+      alert("beforeSub" + cardiovascularArray[i].getAttribute("name"));
+      cardiovascularArray[i].setAttribute("name",cardiovascularNamesArray[i]);
+      alert("afterSub" + cardiovascularArray[i].getAttribute("name"));
+    }
+  }
+ 
+ 
+  //xampp or moodle or email. might need to show value and score in result.php
+}

@@ -42,9 +42,9 @@
                 <div class = "cardiovascular-container">
 
                   <div class = "select-container">
-                    <label for="cardiovascularSystem">Cardiovascular system</label>
-                    <label for="cardiovascularSystem">Mean arterial pressure OR administration of vasopressors required</label>
-                    <label for="cardiovascularSystem">Please enter an input for atleast one option:</label>
+                    <label>Cardiovascular system</label>
+                    <label>Mean arterial pressure OR administration of vasopressors required</label>
+                    <label>Please enter an input for atleast one option:</label>
                     <!-- <select name="cardiovascularSystem" id="cardiovascularSystem">
                       <option value="0">MAP ≥ 70 mmHg</option>
                       <option value="1">MAP < 70 mmHg</option>
@@ -56,23 +56,23 @@
 
                     <p>Administration of vasopressors: </p>
                     <label class="rb-container">MAP
-                      <input type = "radio" id ="map" value="0" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
+                      <input type = "radio" id ="mapRadio" value="0" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                     </label>                
 
                     <label class="rb-container">Dopamine
-                      <input type = "radio" id ="dopamine" value="1" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
+                      <input type = "radio" id ="dopamineRadio" value="1" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                     </label>   
 
                     <label class="rb-container">Dobutamine
-                      <input type = "radio" id ="dobutamine" value="2" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
+                      <input type = "radio" id ="dobutamineRadio" value="2" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                     </label>                
 
                     <label class="rb-container">Epinephrine
-                      <input type = "radio" id ="epinephrine" value="3" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
+                      <input type = "radio" id ="epinephrineRadio" value="3" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                     </label>   
 
                     <label class="rb-container">Norepinephrine
-                      <input type = "radio" id ="norepinephrine" value="4" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
+                      <input type = "radio" id ="norepinephrineRadio" value="4" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                     </label>                
 
                     <div id ="map-container" style ="display:none;">
@@ -88,7 +88,7 @@
                     <div id ="dopamine-container" style ="display:none;">
 
                       <label for='dopamine'>dopamine:</label>
-                      <select name="dopamine" >
+                      <select name="dopamine" id="dopamine">
                         <option value="2">dopamine ≤ 5 μg/kg/min</option>
                         <option value="3">dopamine > 5 μg/kg/min</option>
                         <option value="4">dopamine > 15 μg/kg/min</option>
@@ -100,7 +100,7 @@
                     <div id ="dobutamine-container" style ="display:none;">
 
                       <label for='dobutamine'>dobutamine:</label>
-                      <input type='text'  name='dobutamine'>
+                      <input type='text'  name='dobutamine' id="dobutamine">
 
                     </div>
 
@@ -108,7 +108,7 @@
                     <div id ="epinephrine-container" style ="display:none;">
 
                       <label for='epinephrine'>epinephrine:</label>
-                      <select name="epinephrine" >
+                      <select name="epinephrine" id="epinephrine">
                         <option value="3">epinephrine ≤ 0.1 μg/kg/min</option>
                         <option value="4">epinephrine > 0.1 μg/kg/min</option>
                       </select>
@@ -119,7 +119,7 @@
                     <div id ="norepinephrine-container" style ="display:none;">
 
                       <label for='norepinephrine'>norepinephrine:</label>
-                      <select name="norepinephrine" >
+                      <select name="norepinephrine" id="norepinephrine">
                         <option value="3">norepinephrine ≤ 0.1 μg/kg/min</option>
                         <option value="4">norepinephrine > 0.1 μg/kg/min</option>
                       </select>
@@ -191,7 +191,7 @@
                     </select>
                 </div>
 
-                <input type='submit' value='submit form'> 
+                <input type='submit' value='submit form' onclick = "getCardiovascular()"> 
         </form>
 
         <script src = "../script/script.js"></script>

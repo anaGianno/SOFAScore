@@ -11,12 +11,14 @@
 
         <?php
             $centralNervousSystem = $_POST["centralNervousSystem"];
-            // $cardiovascularSystem = $_POST["cardiovascularSystem"];
-            $map = $_POST["map"];
-            $dopamine = $_POST["dopamine"];
-            $dobutamine = $_POST["dobutamine"];
-            $epinephrine = $_POST["epinephrine"];
-            $norepinephrine= $_POST["norepinephrine"];
+            // $chosenCardiovascular = 
+            $cardiovascularSystem = $_POST["cardiovascularSystem"];
+            // $map = $_POST["map"];
+            // $dopamine = $_POST["dopamine"];
+            // $dobutamine = $_POST["dobutamine"];
+            // $epinephrine = $_POST["epinephrine"];
+            // $norepinephrine= $_POST["norepinephrine"];
+
             $respiratorySystem = $_POST["respiratorySystem"];
             // $cpapTrue = $_POST["cpapTrue"];
             // $cpapFalse = $_POST["cpapFalse"];
@@ -38,12 +40,12 @@
 
             echo "centralNervousSystem: " . $centralNervousSystem . "<br>";
 
-            $cardiovascularArray = array($map,$dopamine,$dobutamine,$epinephrine,$norepinephrine,$respiratorySystem);
-            for($i=0;$i<sizeof($cardiovascularArray);$i++){
-                if($cardiovascularArray[$i] != null){
-                    $cardiovascularSystem = $cardiovascularArray[$i];
-                }
-            }
+            // $cardiovascularArray = array($map,$dopamine,$dobutamine,$epinephrine,$norepinephrine,$respiratorySystem);
+            // for($i=0;$i<sizeof($cardiovascularArray);$i++){
+            //     if($cardiovascularArray[$i] != null){
+            //         $cardiovascularSystem = $cardiovascularArray[$i];
+            //     }
+            // }
 
             echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
 
@@ -62,5 +64,6 @@
             echo "overall score: " . $renalFunction + $cardiovascularSystem + $respiratorySystem
                                     + $coagulation + $liver . "<br>";
         ?>
+        <script src = "../script/script.js"></script>
     </body>
 </html>
