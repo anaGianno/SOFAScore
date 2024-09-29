@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>SOFAScore</title>
-        <link rel="stylesheet" href = "../style/style.css">
+        <link rel="stylesheet" href = "style.css">
     </head>
     <body>
         <div class = "header">
@@ -22,13 +22,15 @@
             $respiratorySystem = $_POST["respiratorySystem"];
             // $cpapTrue = $_POST["cpapTrue"];
             // $cpapFalse = $_POST["cpapFalse"];
-            $cpap = $_POST["cpap"];
+            if($respiratorySystem != null){
+                $cpap = $_POST["cpap"];
+            }
             $coagulation = $_POST["coagulation"];
             $liver = $_POST["liver"];
             $renalFunction = $_POST["renalFunction"];
-            setcookie("patient-nhi",$nhi);
-            setcookie("patient-surname",$sname);
-            setcookie("patient-firstname",$fname);
+            // setcookie("patient-nhi",$nhi);
+            // setcookie("patient-surname",$sname);
+            // setcookie("patient-firstname",$fname);
 
             $nhi = $_COOKIE["patient-nhi"];
             $fname = $_COOKIE["patient-firstname"];
@@ -64,6 +66,6 @@
             echo "overall score: " . $renalFunction + $cardiovascularSystem + $respiratorySystem
                                     + $coagulation + $liver . "<br>";
         ?>
-        <script src = "../script/script.js"></script>
+        <script src = "script.js"></script>
     </body>
 </html>

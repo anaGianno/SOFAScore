@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>SOFAScore</title>
-        <link rel="stylesheet" href = "../style/style.css">
+        <link rel="stylesheet" href = "style.css">
     </head>
     <body>
         <!-- header -->
@@ -43,6 +43,6 @@
         ?>
 
         <!-- reference script -->
-        <script src = "../script/script.js"></script>
+        <script src = "script.js"></script>
     </body>
 </html>

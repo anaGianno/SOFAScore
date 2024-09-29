@@ -16,6 +16,32 @@ function checknhi(){
     }
 }
 
+function checkCardiovascularResult(){
+  var cardiovascular = document.getElementsByName("cardiovascularRadio");
+  //let cardiovascularID;
+  for(var i = 0; i < cardiovascular.length; i++){
+      if(cardiovascular[i].checked){
+        alert("cardiovascular true");
+        return checkCpapResult();
+      }
+  }
+  alert("cardiovascular false");
+  return false;
+}
+
+function checkCpapResult(){
+  var cpap = document.getElementsByName("cpap");
+  //let cardiovascularID;
+  for(var i = 0; i < cpap.length; i++){
+      if(cpap[i].checked){
+        alert("cpap true");
+        return true;
+      }
+  }
+  alert("cpap false");
+  return false;
+}
+
 // get slider and output by Id 
 var slider = document.getElementById("centralNervousSystem");
 var output = document.getElementById("agenumber");
@@ -82,8 +108,6 @@ function checkCardiovascular(){
   //xampp or moodle or email. might need to show value and score in result.php
 }
 
-let prevName= "prevName";
-let cardiovascularExist;
 function getCardiovascular(){
   var map = document.getElementById("map");
   var dopamine = document.getElementById("dopamine");
@@ -105,24 +129,24 @@ function getCardiovascular(){
     }
   }
 
-  alert("teeeeest");
-  alert("cardio value" + cardiovascularValue);
+  //alert("teeeeest");
+  //alert("cardio value" + cardiovascularValue);
   // hide/display pages based on pagenumber index
   for(var i = 0; i<cardiovascularArray.length;i++){
     name1 = cardiovascularArray[i].getAttribute("name");
-    alert("test1" + cardiovascularArray[i].getAttribute("name"));
+    // alert("test1" + cardiovascularArray[i].getAttribute("name"));
 
     if(i==cardiovascularValue){
-        alert("beforeMain" + cardiovascularArray[i].getAttribute("name"));
+        //alert("beforeMain" + cardiovascularArray[i].getAttribute("name"));
         cardiovascularArray[i].setAttribute("name","cardiovascularSystem");
-        alert("afterMain" + cardiovascularArray[i].getAttribute("name"));
+        //alert("afterMain" + cardiovascularArray[i].getAttribute("name"));
         prevName = name1;
         cardiovascularExist = true;
     }
     else{
-      alert("beforeSub" + cardiovascularArray[i].getAttribute("name"));
+     // alert("beforeSub" + cardiovascularArray[i].getAttribute("name"));
       cardiovascularArray[i].setAttribute("name",cardiovascularNamesArray[i]);
-      alert("afterSub" + cardiovascularArray[i].getAttribute("name"));
+      //alert("afterSub" + cardiovascularArray[i].getAttribute("name"));
     }
   }
  

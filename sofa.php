@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>SOFAScore</title>
-        <link rel="stylesheet" href = "../style/style.css">
+        <link rel="stylesheet" href = "style.css">
     </head>
     <body>
         <!-- header -->
@@ -191,9 +191,9 @@
                     </select>
                 </div>
 
-                <input type='submit' value='submit form' onclick = "getCardiovascular()"> 
+                <input type='submit' value='submit form' onclick = "getCardiovascular();return checkCardiovascularResult();"> 
         </form>
 
-        <script src = "../script/script.js"></script>
+        <script src = "script.js"></script>
     </body>
 </html>
