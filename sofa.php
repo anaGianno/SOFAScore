@@ -15,16 +15,16 @@
               setcookie("patient-surname",$sname);
               setcookie("patient-firstname",$fname);
 
-              echo "<label>First name </label><br><p>" . $fname . "</p><br>";
-              echo "<label>Surname </label><br><p>" . $sname . "</p><br>";
-              echo "<label>NHI </label><br><p>" . $nhi . "</p><br>";
+              echo "<label class = 'labelpagetwothreemain' style = 'display:inline;'>First name: </label><p style = 'display:inline;margin-right:5rem;'>" . $fname . "</p>";
+              echo "<label class = 'labelpagetwothreemain' style = 'display:inline;'>Surname: </label><p style = 'display:inline;margin-right:5rem;'>" . $sname . "</p>";
+              echo "<label class = 'labelpagetwothreemain' style = 'display:inline;'>NHI: </label><p style = 'display:inline;margin-right:5rem;'>" . $nhi . "</p><br><br><br>";
           ?>
         
 
 
            <form method="POST" name="form1"  action="result.php">
               
-                <label for="centralNervousSystem" class = "labelpagetwomain">Central nervous system: Glasgow coma scale</label><br>
+                <label for="centralNervousSystem" class = "labelpagetwothreemain">Central nervous system: Glasgow coma scale</label>
                 <div class="slidecontainer">
                     <div class ="slidenumbercontainer">
                       <p style = "display:inline">Value: </p>
@@ -35,7 +35,7 @@
               
 
                  <div class = "cardiovascular-container">
-                    <label class = "labelpagetwomain">Cardiovascular system: Mean arterial pressure OR administration of vasopressors required</label><br>
+                    <label class = "labelpagetwothreemain">Cardiovascular system: Mean arterial pressure OR administration of vasopressors required</label>
                     <label>Please enter an input for atleast one option:</label>
 
                     <label class="rb-container">MAP
@@ -58,7 +58,7 @@
                       <input type = "radio" class ="radio" id ="norepinephrineRadio" value="4" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                     </label>                
 
-                    <label>Select Option:</label>
+                    <label class = "labelpagetwothreemain">Select Option:</label>
                     <div id ="map-container" style ="display:none;">
                       <select name= "map" id="map">
                         <option value="0">MAP ≥ 70 mmHg</option>
@@ -96,7 +96,7 @@
                   </div><br>
 
                 <div class = "select-container">
-                  <label for="respiratorySystem" class = "labelpagetwomain">Respiratory system: PaO2/FiO2 [mmHg (kPa)]</label>
+                  <label for="respiratorySystem" class = "labelpagetwothreemain">Respiratory system: PaO2/FiO2 [mmHg (kPa)]</label>
                   <select name="respiratorySystem" id="respiratorySystem">
                     <option value="0">≥ 400 (53.3)</option>
                     <option value="1">< 400 (53.3)</option>
@@ -104,21 +104,21 @@
                     <option value="3">< 200 (26.7) and mechanically ventilated including CPAP</option>
                     <option value="4">< 100 (13.3) and mechanically ventilated including CPAP</option>
                   </select>
-                </div><br>
+                </div>
               
-                <label class = "labelpagetwomain">Mechanically ventilated including CPAP: </label>
+                <label class = "labelpagetwothreemain">(Mechanically ventilated including CPAP): </label>
                 <label class="rb-container">Yes
-                  <input type = "radio"  class ="radio"  id ="cpapTrue" value="true" name = "cpap">
+                  <input type = "radio"  class ="radio"  id ="cpapTrue" value="Yes" name = "cpap">
                   <span class="checkmark"></span>
                 </label>    
 
                 <label class="rb-container">No
-                  <input type = "radio" class ="radio"   id ="cpapFalse" value="false" name = "cpap">
+                  <input type = "radio" class ="radio"   id ="cpapFalse" value="No" name = "cpap">
                   <span class="checkmark"></span>
                 </label><br>
 
                   <div class = "select-container">
-                      <label for="coagulation" class = "labelpagetwomain">Coagulation: Platelets (×103/μl)</label>
+                      <label for="coagulation" class = "labelpagetwothreemain">Coagulation: Platelets (×103/μl)</label>
                       <select name="coagulation" id="coagulation">
                           <option value="0">≥ 150</option>
                           <option value="1">< 150</option>
@@ -126,10 +126,10 @@
                           <option value="3">< 50</option>
                           <option value="4">< 20</option>
                       </select>
-                  </div>
+                  </div><br>
                   
                   <div class = "select-container">
-                      <label for="liver" class = "labelpagetwomain">Liver: Bilirubin (mg/dl)</label>
+                      <label for="liver" class = "labelpagetwothreemain">Liver: Bilirubin (mg/dl)</label>
                       <select name="liver" id="liver">
                           <option value="0">< 1.2</option>
                           <option value="1">1.2–1.9</option>
@@ -137,10 +137,10 @@
                           <option value="3">6.0–11.9</option>
                           <option value="4">>12.0 </option>
                       </select>
-                  </div>
+                  </div><br>
 
                   <div class = "select-container">
-                      <label for="renalFunction" class = "labelpagetwomain">Renal Function: Creatinine (mg/dl) (or urine output)</label>
+                      <label for="renalFunction" class = "labelpagetwothreemain">Renal Function: Creatinine (mg/dl) (or urine output)</label>
                       <select name="renalFunction" id="renalFunction">
                           <option value="0">< 1.2 </option>
                           <option value="1">1.2–1.9 </option>
@@ -150,7 +150,7 @@
                       </select>
                   </div>
 
-                  <input type='submit' value='submit form' onclick = "getCardiovascular();return checkCardiovascularResult();"> 
+                  <input type='submit' value='Submit' onclick = "getCardiovascular();return checkCardiovascularResult();"> 
           </form> 
         </div>
 

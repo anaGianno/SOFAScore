@@ -69,9 +69,10 @@ p{
   margin:0;
   font-family: "Red Hat Display", sans-serif;
   display: block;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 200;
-  color: rgb(151,145,114);
+  /* color: rgb(151,145,114); */
+  color: rgb(171,165,134); 
 }
 label{
   font-family: "Red Hat Display", sans-serif;
@@ -92,7 +93,7 @@ label{
   color: rgb(151,145,114);
 }
 
-.labelpagetwomain{
+.labelpagetwothreemain{
   color: rgb(240,230,199);
 }
 

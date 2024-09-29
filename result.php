@@ -5,7 +5,8 @@
         <link rel="stylesheet" href = "style.css">
     </head>
     <body>
-
+    <label class = "title">Result</label>
+    <div class = 'div-container'>
         <?php
             $centralNervousSystem = $_POST["centralNervousSystem"];
             $cardiovascularSystem = $_POST["cardiovascularSystem"];
@@ -20,27 +21,28 @@
             $fname = $_COOKIE["patient-firstname"];
             $sname = $_COOKIE["patient-surname"];
 
-            echo "your firstname is: " . $fname . "<br>";
-            echo "your surname is: " . $sname . "<br>";
-            echo "your nhi is: " . $nhi . "<br>";
+            echo "<label class = 'labelpagetwothreemain'  style = 'display:inline;'>First name: </label><p  style = 'display:inline;margin-right:5rem;'>" . $fname . " </p>";
+            echo "<label class = 'labelpagetwothreemain'  style = 'display:inline;'>Surname:  </label><p  style = 'display:inline;margin-right:5rem;'>" . $sname . " </p>";
+            echo "<label class = 'labelpagetwothreemain'  style = 'display:inline;'>NHI number: </label><p  style = 'display:inline;margin-right:5rem;'>" . $nhi . " </p><br><br><br>";
 
-            echo "centralNervousSystem: " . $centralNervousSystem . "<br>";
+            echo "<label class = 'labelpagetwothreemain'>Central Nervous System </label><p>" . $centralNervousSystem . "</p><br>";
 
-            echo "cardiovascularSystem: " . $cardiovascularSystem . "<br>";
+            echo "<label class = 'labelpagetwothreemain'>Cardiovascular System </label><p>" . $cardiovascularSystem . "</p>";
 
-            echo "cpap: " . $cpap. "<br>";
-            if($respiratorySystem > 2 and $cpap == "false"){
+            echo "<label class = 'labelpagetwothreemain'>(Mechanically ventilated including CPAP) </label><p>" . $cpap. "</p><br>";
+            if($respiratorySystem > 2 and $cpap == "No"){
                 $respiratorySystem = 2;
             }
 
-            echo "respiratorySystem: " . $respiratorySystem . "<br>";
-            echo "coagulation: " . $coagulation . "<br>";
-            echo "liver: " . $liver . "<br>";
-            echo "renalFunction: " . $renalFunction . "<br>";
+            echo "<label class = 'labelpagetwothreemain'>Respiratory System </label><p>" . $respiratorySystem . "</p><br>";
+            echo "<label class = 'labelpagetwothreemain'>Coagulation </label><p>" . $coagulation . "</p><br>";
+            echo "<label class = 'labelpagetwothreemain'>Liver </label><p>" . $liver . "</p><br>";
+            echo "<label class = 'labelpagetwothreemain'>Renal Function </label><p>" . $renalFunction . "</p><br>";
 
-            echo "overall score: " . $renalFunction + $cardiovascularSystem + $respiratorySystem
-                                    + $coagulation + $liver . "<br>";
+            echo "<label class = 'labelpagetwothreemain'>Overall Score </label><p> " . $renalFunction + $cardiovascularSystem + $respiratorySystem
+                                    + $coagulation + $liver . "</p>";
         ?>
+    </div>
         <script src = "script.js"></script>
     </body>
 </html>
