@@ -1,13 +1,129 @@
-/* style the header at the top of the page */
-.header{
-  background-color:rgb(100,100,100);
-  border-bottom: 1px solid rgb(48,54,61);
-  height:2.5rem;
-  width:100vw;
-  text-align:center;
-  padding-top:0.5rem;
+.div-container{
+  display: inline-block;
+  border: 1px solid rgb(30,40,45);
+  background-color: rgb(2,10,18,0.5);
+  min-height: 45rem;
+  width: 92.5%;
+  margin-left:2%;
+  margin-right:2%;
+  padding:2rem;
+  height:fit-content;
+  margin-bottom:2%;
 }
 
-.regex{
-color: rgb(255,0,0);
+.title{
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  display: block;
+  margin-left: 0%;
+  text-align: center;
+  color: rgb(240,230,199);
 }
+
+/* style body */
+body{
+  background-color: rgb(1,10,19);
+  background-image: linear-gradient(rgb(2,13,23), rgb(23,63,81));
+  width:100%;
+  min-height:100vh;
+  margin:0;
+}
+
+/* style the navigation buttons */
+.buttontest{
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  cursor:pointer;
+  padding-top:0.25rem;
+  padding-bottom:0.25rem; 
+  border: 1px solid rgb(200,169,106);
+  border-radius: 1px;
+  width:10%;
+  height:5%;
+  color: rgb(173,161,125);
+  background-color:rgb(30,35,40);
+  user-select: none;
+  transition: background-color 0.15s;
+  margin: 0;
+  position: absolute;
+  top: 87.5%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+.buttontest:hover{
+  /* background-color:rgb(40,43,43); */
+  background-color: rgb(30,35,40); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(30,35,40), rgb(65,59,44));
+}
+.buttontest:active{
+  border: 1px solid rgb(82,66,31);
+  color: rgb(62,55,40);
+  background-image: none;
+}
+
+p{
+  margin:0;
+  font-family: "Red Hat Display", sans-serif;
+  display: block;
+  font-size: 1rem;
+  font-weight: 200;
+  color: rgb(151,145,114);
+}
+label{
+  font-family: "Red Hat Display", sans-serif;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  /* color: rgb(151,145,114); */
+  color: rgb(151,145,114);
+}
+
+.labelpageone{
+  margin-left:40%;
+}
+
+.labelpageonefname{
+  margin-left:40%;
+  margin-top:10%;
+  color: rgb(151,145,114);
+}
+
+.labelpagetwomain{
+  color: rgb(240,230,199);
+}
+
+
+
+
+input{
+  margin-left:40%;
+  width:20%;
+  height:2rem;
+  border-radius: 1px;
+  color: rgb(173,161,125);
+  background-color: rgb(1,10,19);
+  border: 1px solid rgb(149,144,131);
+}
+
+input:focus{
+  outline:none;
+  border-radius: 1px;
+  color: rgb(173,161,125);
+  background-color:rgb(40,43,43);
+  background-image: linear-gradient(rgb(30,35,40), rgb(37,49,38));
+  border: 1px solid rgb(196,166,106);
+}
+
+.slider{
+  margin:0;
+}
+
+.radio{
+  margin:0;
+  width:1rem;
+}
+

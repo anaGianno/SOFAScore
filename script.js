@@ -6,14 +6,24 @@ function checknhi(){
     var nhianswer = document.getElementById("nhianswer");
     let nhipattern = /^[A-Z]{3}\d{4}$/;
     if(nhipattern.test(nhi.value)){
-        nhianswer.innerHTML = "good nhi pattern"
-        return true;
+        return checkName();
     }
     else{
-        nhianswer.innerHTML = "bad nhi pattern"
-        alert("bad nhi pattern");
+        alert("NHI number should conform to the pattern AAANNNN where A=uppercase letter and N=digit");
         return false;
     }
+}
+
+function checkName(){
+  var fname = document.getElementById("fname");
+  var sname = document.getElementById("sname");
+  if(fname.value === "" | sname.value === ""){
+      alert("Please enter a first name/surname");
+      return false;
+  }
+  else{
+    return true;
+  }
 }
 
 function checkCardiovascularResult(){
@@ -21,24 +31,21 @@ function checkCardiovascularResult(){
   //let cardiovascularID;
   for(var i = 0; i < cardiovascular.length; i++){
       if(cardiovascular[i].checked){
-        alert("cardiovascular true");
         return checkCpapResult();
       }
   }
-  alert("cardiovascular false");
+  alert("Please enter an input for cardiovascular system");
   return false;
 }
 
 function checkCpapResult(){
   var cpap = document.getElementsByName("cpap");
-  //let cardiovascularID;
   for(var i = 0; i < cpap.length; i++){
       if(cpap[i].checked){
-        alert("cpap true");
         return true;
       }
   }
-  alert("cpap false");
+  alert("Please enter an input for CPAP");
   return false;
 }
 
@@ -51,22 +58,6 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
-
-//inputs: textboxes are okay
-//input measurements: its nice to add
-//dobutamine: textbox
-//renal function urine output:add that
-
-
-// var cardiovascularDropdown = document.getElementById("cardiovascularDropdown");
-// var cardiovascular = document.getElementsByName("cardiovascularRadio");
-// var cardiovascularValue;
-// for(var i = 0; i < cardiovascular.length; i++){
-//     if(cardiovascular[i].checked){
-//         cardiovascularValue = cardiovascular[i].value;
-//     }
-// }
-
 
 function checkCardiovascular(){
   // get all page html from Id
@@ -120,7 +111,6 @@ function getCardiovascular(){
   let cardiovascularNamesArray = ["map","dopamine","dobutamine","epinephrine","norepinephrine"];
   let cardiovascularValue;
   var cardiovascular = document.getElementsByName("cardiovascularRadio");
-  let cardiovascularID;
 
   for(var i = 0; i < cardiovascular.length; i++){
     if(cardiovascular[i].checked){
@@ -140,7 +130,6 @@ function getCardiovascular(){
         //alert("beforeMain" + cardiovascularArray[i].getAttribute("name"));
         cardiovascularArray[i].setAttribute("name","cardiovascularSystem");
         //alert("afterMain" + cardiovascularArray[i].getAttribute("name"));
-        prevName = name1;
         cardiovascularExist = true;
     }
     else{
