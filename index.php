@@ -23,7 +23,7 @@
                 $fname = $_COOKIE["patient-firstname"];
                 $sname = $_COOKIE["patient-surname"];
             }
-            // display controls
+            // display controls, check the user has entered the correct NHI number format
                 echo "  <form method='POST' name='form1'  action='sofa.php' autocomplete='off'>
                             <div class = 'div-container'>
                                 <label for='fname' class = 'labelpageonefname'>First name</label>

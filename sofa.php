@@ -53,7 +53,7 @@
                 <label class="rb-container">Dobutamine
                   <input type = "radio" class ="radio" id ="dobutamineRadio" value="2" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                 </label>                
-                adio buttons
+                
                 <label class="rb-container">Epinephrine
                   <input type = "radio" class ="radio" id ="epinephrineRadio" value="3" name = "cardiovascularRadio" onclick= "checkCardiovascular()">
                 </label>   
@@ -85,7 +85,7 @@
                   </select>
                 </div>
 
-                <div id ="epinephrespiratorysystemine-container" style ="display:none;">
+                <div id ="epinephrine-container" style ="display:none;">
                   <select name="epinephrine" id="epinephrine">
                     <option value="3">epinephrine ≤ 0.1 μg/kg/min</option>
                     <option value="4">epinephrine > 0.1 μg/kg/min</option>
@@ -140,26 +140,27 @@
               <div class = "select-container">
                 <label for="liver" class = "labelpagetwothreemain">Liver: Bilirubin (mg/dl)</label>
                 <select name="liver" id="liver">
-                  <option value="0">< 1.2</option>
-                  <option value="1">1.2–1.9</option>
-                  <option value="2">2.0–5.9 </option>
-                  <option value="3">6.0–11.9</option>
-                  <option value="4">>12.0 </option>
+                  <option value="0">< 1.2 [< 20]</option>
+                  <option value="1">1.2–1.9 [20-32]</option>
+                  <option value="2">2.0–5.9 [33-101]</option>
+                  <option value="3">6.0–11.9 [102-204]</option>
+                  <option value="4">>12.0 [> 204]</option>
                 </select>
               </div><br>
 
               <!-- renal input -->  
               <div class = "select-container">
-                <label for="renalFunction" class = "labelpagetwothreemain">Renal Function: Creatinine (mg/dl) (or urine output)</label>
+                <label for="renalFunction" class = "labelpagetwothreemain">Renal Function: Creatinine (mg/dl) [μmol/L] (or urine output)</label>
                 <select name="renalFunction" id="renalFunction">
-                  <option value="0">< 1.2 </option>
-                  <option value="1">1.2–1.9 </option>
-                  <option value="2">2.0–3.4 </option>
-                  <option value="3">3.5–4.9 (or < 500 ml/day)</option>
-                  <option value="4">> 5.0 (or < 200 ml/day) </option>
+                  <option value="0">< 1.2 [< 110]</option>
+                  <option value="1">1.2–1.9 [110-170] </option>
+                  <option value="2">2.0–3.4 [171-299] </option>
+                  <option value="3">3.5–4.9 [300-440] (or < 500 ml/day)</option>
+                  <option value="4">> 5.0 [> 440] (or < 200 ml/day) </option>
                 </select>
               </div>
 
+              <!-- make sure the user entered all inputs and get the value of cardiovascular dropdown box -->
               <input type='submit' value='Submit' onclick = "getCardiovascular();return checkCardiovascularResult();"> 
           </form> 
         </div>
