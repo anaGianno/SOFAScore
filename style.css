@@ -16,12 +16,10 @@
   font-weight: 800;
   font-size: 5rem;
   display: block;
-  margin-left: 0%;
-  text-align: center;
-  color: rgb(240,230,199);
+  color:  rgb(240,230,199);
+  margin-left:37.5%;
 }
 
-/* style body */
 body{
   background-color: rgb(1,10,19);
   background-image: linear-gradient(rgb(2,13,23), rgb(23,63,81));
@@ -30,7 +28,6 @@ body{
   margin:0;
 }
 
-/* style the navigation buttons */
 .buttontest{
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
@@ -55,10 +52,10 @@ body{
 }
 
 .buttontest:hover{
-  /* background-color:rgb(40,43,43); */
-  background-color: rgb(30,35,40); /* For browsers that do not support gradients */
+  background-color: rgb(30,35,40); 
   background-image: linear-gradient(rgb(30,35,40), rgb(65,59,44));
 }
+
 .buttontest:active{
   border: 1px solid rgb(82,66,31);
   color: rgb(62,55,40);
@@ -71,7 +68,6 @@ p{
   display: block;
   font-size: 1.5rem;
   font-weight: 200;
-  /* color: rgb(151,145,114); */
   color: rgb(171,165,134); 
 }
 label{
@@ -79,7 +75,6 @@ label{
   display: block;
   font-size: 2rem;
   font-weight: 500;
-  /* color: rgb(151,145,114); */
   color: rgb(151,145,114);
 }
 
@@ -96,7 +91,6 @@ label{
 .labelpagetwothreemain{
   color: rgb(240,230,199);
 }
-
 
 
 
